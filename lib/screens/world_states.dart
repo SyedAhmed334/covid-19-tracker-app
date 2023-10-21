@@ -2,6 +2,7 @@
 
 import 'package:covid_19_tracker_app/Models/WorldStateModel.dart';
 import 'package:covid_19_tracker_app/Services/Utilities/states_services.dart';
+import 'package:covid_19_tracker_app/screens/countries_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:pie_chart/pie_chart.dart';
@@ -26,21 +27,6 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
     // TODO: implement dispose
     super.dispose();
     _controller.dispose();
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    // Timer(
-    //   Duration(seconds: 5),
-    //       () => Navigator.push(
-    //     context,
-    //     MaterialPageRoute(
-    //       builder: (context) => WorldStatesScreen(),
-    //     ),
-    //   ),
-    // );
   }
 
   final pieColors = [
@@ -135,13 +121,23 @@ class _WorldStatesScreenState extends State<WorldStatesScreen>
                             ),
                           ),
                         ),
-                        Container(
-                          height: 50,
-                          decoration: BoxDecoration(
-                              color: Color(0xff1aa260),
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Center(
-                            child: Text('Track Countries'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CountriesScreen(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: 50,
+                            decoration: BoxDecoration(
+                                color: Color(0xff1aa260),
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Center(
+                              child: Text('Track Countries'),
+                            ),
                           ),
                         ),
                       ],

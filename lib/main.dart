@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:covid_19_tracker_app/screens/countries_screen.dart';
 import 'package:covid_19_tracker_app/screens/splash_screen.dart';
 import 'package:covid_19_tracker_app/screens/world_states.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         primarySwatch: Colors.blue,
       ),
-      home: WorldStatesScreen(),
+      home: CountriesScreen(),
     );
   }
 }
