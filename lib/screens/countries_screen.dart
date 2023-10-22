@@ -86,8 +86,9 @@ class _CountriesScreenState extends State<CountriesScreen> {
                               return CountryColumn(
                                 image: snapshot.data![index]['countryInfo']
                                     ['flag'],
-                                country: snapshot.data![index]['country'],
+                                countryName: snapshot.data![index]['country'],
                                 affectedPeople: snapshot.data![index]['cases'],
+                                countryMap: snapshot.data![index],
                               );
                             } else if (name
                                 .toLowerCase()
@@ -95,8 +96,9 @@ class _CountriesScreenState extends State<CountriesScreen> {
                               return CountryColumn(
                                 image: snapshot.data![index]['countryInfo']
                                     ['flag'],
-                                country: snapshot.data![index]['country'],
+                                countryName: snapshot.data![index]['country'],
                                 affectedPeople: snapshot.data![index]['cases'],
+                                countryMap: snapshot.data![index],
                               );
                             } else {
                               return Container();
